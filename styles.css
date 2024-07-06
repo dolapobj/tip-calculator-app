@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-gray-cyan: hsl(186, 14%, 43%);
+  --gray-cyan: hsl(184, 14%, 56%);
+  --light-gray-cyan: hsl(185, 41%, 84%);
+  --very-light-gray-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-gray-cyan);
+  overflow-x: auto;
+}
+
+.calculator {
+  background-color: white;
+  width: 300px;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+.calculator .content-wrapper {
+  margin: 1.5rem;
+}
+.calculator .input-section-wrapper h1 {
+  font-size: 0.7rem;
+  color: var(--dark-gray-cyan);
+  margin-bottom: 0.4rem;
+}
+.calculator .calculated-section-wrapper {
+  background-color: var(--very-dark-cyan);
+}
+.calculator .button-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+}
+.calculator .button-wrapper button {
+  height: 30px;
+  width: 120px;
+  font-family: "Space Mono", monospace;
+  color: white;
+  background-color: var(--very-dark-cyan);
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+.calculator .button-wrapper button:hover {
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+.calculator .button-wrapper .clicked {
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+.calculator .button-wrapper .input-custom {
+  height: 30px;
+  width: 120px;
+}
+.calculator__bill {
+  margin-bottom: 1rem;
+}
+.calculator__select-tip {
+  margin-bottom: 1rem;
+}
+.calculator__number-people {
+  margin-bottom: 1rem;
+}
+.calculator input {
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+  background-color: var(--very-light-gray-cyan);
+  padding-left: 40px;
+  outline: none;
+  border: none;
+  color: var(--very-dark-cyan);
+  height: 40px;
+  width: 100%;
+  text-align: right;
+  padding-right: 20px;
+}
+.calculator input::placeholder {
+  color: var(--dark-gray-cyan);
+  font-size: 0.75rem;
+}
+.calculator input:hover {
+  border: 1px, solid, var(--strong-cyan);
+  border-radius: 4px;
+}
+.calculator .input-container {
+  position: relative;
+  width: 100%;
+}
+.calculator .icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  height: 40%;
+}
+.calculator .calculated-section-wrapper {
+  padding-inline: 1rem;
+  padding-block: 1.5rem;
+  border-radius: 10px;
+}
+.calculator .calculated-section-wrapper .tip-amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+.calculator .calculated-section-wrapper .total-amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+.calculator .calculated-section-wrapper h1 {
+  color: var(--light-gray-cyan);
+  font-size: 0.75rem;
+}
+.calculator .calculated-section-wrapper h2 {
+  color: var(--strong-cyan);
+  align-self: flex-end;
+}
+.calculator .calculated-section-wrapper p {
+  font-size: 0.5rem;
+  color: var(--dark-gray-cyan);
+  margin-top: 0.25rem;
+}
+.calculator .calculated-section-wrapper button {
+  font-family: monospace;
+  width: 100%;
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+  height: 35px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: -0.5rem;
+}
+.calculator .error {
+  border: 1px, solid, darkred;
+  border-radius: 4px;
+}
+.calculator .number-people-error {
+  display: none;
+  color: darkred;
+  font-size: 0.7rem;
+  margin-bottom: 0.4rem;
+}
+.calculator .people-error-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .calculator {
+    width: 640px;
+  }
+  .content-wrapper {
+    display: flex;
+  }
+  .tip-amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem !important;
+  }
+  .calculated-section-wrapper {
+    width: 100%;
+    margin: 0.5rem;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  button {
+    margin-top: auto;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script defer src="./main.js"></script>
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+  <main class="calculator">
+    <div class="content-wrapper">
+    <div class="input-section-wrapper">
+    <section class="calculator__bill">
+      <div class="bill-title-error-wrapper">
+      <h1>Bill</h1>
+      <span id="bill-error" class="bll-error"></span>
+    </div>
+    
+      <div class="input-container">
+        <img src="./images/icon-dollar.svg" class="icon" alt="Icon">
+        <input type="number" id="bill" placeholder="Enter bill amount">
+      </div>
+
+    </section>  
+
+    <section class="calculator__select-tip">
+      <h1>Select Tip %</h1>
+      <div class="button-wrapper">
+        <button class="tip-amt" data-tip="5">5%</button>
+        <button class="tip-amt" data-tip="10">10%</button>
+        <button class="tip-amt" data-tip="15">15%</button>
+        <button class="tip-amt" data-tip="25">25%</button>
+        <button class="tip-amt" data-tip="50">50%</button>
+        <input class = "input-custom" type="number" id="custom-amt" placeholder="Custom">
+      </div>
+    </section>
+
+    <section class="calculator__number-people">
+      <div class="people-error-wrapper">
+        <h1>Number of People</h1>
+      <span id = "number-people-error" class="number-people-error"> Can't be zero</span>
+    </div>
+    <div class="input-container">
+      <img src="./images/icon-person.svg" class="icon" alt="Icon">
+      <input class = "input-number" type="number" id="number-people" placeholder="Enter number of people">
+    </div>
+    </section>
+    </div>
+
+    <div class="calculated-section-wrapper">
+      <section class="tip-amount">
+        <div class="amt-wrapper">
+          <h1>Tip Amount</h1>
+          <p> /person</p>
+        </div>
+        <h2 id = "calculated-tip-amount"  class="calculated amt"></h2>
+      </section>
+      <section class="total-amount">
+        <div class="total-wrapper">
+          <h1>Total</h1>
+          <p> /person</p>
+        </div>
+        <h2 id = "calculated-total-amount" class="calculated amt"></h2>
+      </section>
+      <button id = "reset-button" class="reset">Reset</button>
+    </div>
+  </div>
+  </main>
+</body>
+</html>

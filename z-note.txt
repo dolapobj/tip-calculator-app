@@ -1,0 +1,10 @@
+#figure out what i want to do with the grid 
+#add some spacing between bill ittles and input 
+add media queries for desktop
+add reset functionlity
+
+
+clean up 
+decide if i want to add the highlighting 
+otherwise, submit! all good
+
